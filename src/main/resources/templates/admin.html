@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Admin!</title>
+    </head>
+    <body>
+
+        <h1>Existing accounts:</h1>
+        <table>
+            <tbody>
+                <tr th:each="acc: ${accounts}">
+                    <td th:utext="${acc.username}">1</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+    </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Chat!</title>
+    </head>
+    <body>
+
+        <h1>Chat!!!!!</h1>
+        <table>
+            <tbody>
+                <tr th:each="msg: ${messages}">
+                    <td th:utext="${msg.account.username}">1</td>
+                    <td th:utext="${msg.content}">2</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <form action="#" th:action="@{/chat}" method="POST">
+            <p><label for="msgContent">Your message</label>: <input type="text" name="msgContent" id="msgContent"/></p>
+            <p><input type="submit" value="Submit" /></p>
+        </form>
+
+    </body>
+</html>
